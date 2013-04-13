@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example for AjaxPager</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../ajaxpager.css">
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="../jquery.ajaxpager.js"></script>
+</head>
+<body>
+<h1>Example for AjaxPager</h1>
+
+<div>
+    <pre>
+        $("#pager").ajaxPager({
+            url: "data.php",
+            callback: function (data) {
+                $("#test").empty();
+                for (var index in data){
+                    $("#test").append($("&lt;li/&gt;").text(data[index]['id']+':'+data[index]['name']));
+                }
+            }
+        });
+    </pre>
+    <ul id="test">
+    </ul>
+    <div id="pager" class="ajaxPager"></div>
+</div>
+<script>
+    $(function () {
+        $("#pager").ajaxPager({
+            url: "data.php",
+            callback: function (data) {
+                $("#test").empty();
+                for (var index in data){
+                    $("#test").append($("<li/>").text(data[index]['id']+':'+data[index]['name']));
+                }
+            }
+        });
+    })
+</script>
+</body>
+</html>

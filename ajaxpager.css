@@ -1,0 +1,24 @@
+.ajaxPager a{
+    display: inline-block;
+    width: 20px;
+    text-decoration: none;
+    margin: 0 3px;
+    padding: 3px;
+    text-align: center;
+    color: black;
+    cursor: default;
+}
+.ajaxPager .page-nav:hover,.ajaxPager .active:hover{
+    text-decoration: #2994ff;
+    background-color: #2994ff;
+    color: white;
+    cursor: pointer;
+}
+.ajaxPager .page-nav,.ajaxPager .active{
+    border: solid 1px gainsboro;
+    background-color: white;
+    color: blue;
+}
+.ajaxPager .page-nav{
+    width: 3.5em;
+}
